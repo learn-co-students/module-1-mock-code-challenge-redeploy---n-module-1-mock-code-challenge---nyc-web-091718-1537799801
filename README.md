@@ -29,53 +29,53 @@ We've provided you with a console that you can use to test your code. To enter a
 
 #### Build the following methods on the `Startup` class
 
-- `Startup#name`
-  - returns a **string** that is the startup's name
-- `Startup#founder`
+<!-- - `Startup#name`
+  - returns a **string** that is the startup's name -->
+<!-- - `Startup#founder`
   - returns a **string** that is the founder's name
-  - Once a startup is created, the founder cannot be changed.
-- `Startup#domain`
+  - Once a startup is created, the founder cannot be changed. -->
+<!-- - `Startup#domain`
   - returns a **string** that is the startup's domain
-  - Once a startup is created, the domain cannot be changed.
-- `Startup.all`
-  - should return **all** of the startup instances
-- `Startup.find_by_founder`
-  - given a string of a **founder's name**, returns the **first startup** whose founder's name matches
-- `Startup.domains`
-  - should return an **array** of all of the different startup domains
-- `Startup.pivot(domain)`
+  - Once a startup is created, the domain cannot be changed. -->
+<!-- - `Startup.all`
+  - should return **all** of the startup instances -->
+<!-- - `Startup.find_by_founder`
+  - given a string of a **founder's name**, returns the **first startup** whose founder's name matches -->
+<!-- - `Startup.domains`
+  - should return an **array** of all of the different startup domains -->
+- `pivot(domain)`
   - given a string of a domain, change the domain of the startup
 
 ---
 
 #### Build out the following methods on the `VentureCapitalist` class
 
-- `VentureCapitalist#name`
-  - returns a **string** that is the venture capitalist's name
-- `VentureCapitalist#tres_commas`
+<!-- - `VentureCapitalist#name`
+  - returns a **string** that is the venture capitalist's name -->
+<!-- - `VentureCapitalist#tres_commas`
   - returns a **boolean** stating whether or not the venture capitalist is in the Trés Commas club
-- `VentureCapitalist.all`
-  - returns an array of all venture capitalists
-- `VentureCapitalist.tres_commas_club`
-  - returns an array of all venture capitalists in the Trés Commas club
+<!-- - `VentureCapitalist.all`
+  - returns an array of all venture capitalists -->
+<!-- - `VentureCapitalist.tres_commas_club`
+  - returns an array of all venture capitalists in the Trés Commas club --> -->
 
 ---
 
 #### Build out the following methods on the `FundingRound` class
 
-- `FundingRound.all`
-  - returns all of the funding rounds
-- `FundingRound#startup`
+<!-- - `FundingRound.all`
+  - returns all of the funding rounds -->
+<!-- - `FundingRound#startup`
   - returns the startup object for that given funding round
-  - Once a funding round is created, I should not be able to change the startup
-- `FundingRound#venture_capitalist`
+  - Once a funding round is created, I should not be able to change the startup -->
+<!-- - `FundingRound#venture_capitalist`
   - returns the venture capitalist object for that given funding round
-  - Once a funding round is created, I should not be able to change the venture capitalist
-- `FundingRound#type`
+  <!-- - Once a funding round is created, I should not be able to change the venture capitalist -->
+<!-- - `FundingRound#type`
   - returns the type of funding round
-  - Examples include: Angel, Pre-Seed, Seed, Series A, Series B, Series C, etc.
-- `FundingRound#investment`
-  - returns the amount invested during this funding round. This should be a float that is not be a negative number.
+  - Examples include: Angel, Pre-Seed, Seed, Series A, Series B, Series C, etc. --> -->
+<!-- - `FundingRound#investment`
+  - returns the amount invested during this funding round. This should be a float that is not be a negative number. -->
 
 ---
 
