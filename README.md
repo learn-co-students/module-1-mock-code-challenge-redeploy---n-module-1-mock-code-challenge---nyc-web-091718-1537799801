@@ -29,32 +29,32 @@ We've provided you with a console that you can use to test your code. To enter a
 
 #### Build the following methods on the `Startup` class
 
-- `Startup#name`
+- `Startup#name` #done
   - returns a **string** that is the startup's name
-- `Startup#founder`
+- `Startup#founder` #done
   - returns a **string** that is the founder's name
   - Once a startup is created, the founder cannot be changed.
-- `Startup#domain`
+- `Startup#domain` #done
   - returns a **string** that is the startup's domain
   - Once a startup is created, the domain cannot be changed.
-- `Startup.all`
+- `Startup.all` #done
   - should return **all** of the startup instances
 - `Startup.find_by_founder`
   - given a string of a **founder's name**, returns the **first startup** whose founder's name matches
 - `Startup.domains`
   - should return an **array** of all of the different startup domains
-- `Startup.pivot(domain)`
+- `Startup#pivot(domain)`
   - given a string of a domain, change the domain of the startup
 
 ---
 
 #### Build out the following methods on the `VentureCapitalist` class
 
-- `VentureCapitalist#name`
+- `VentureCapitalist#name` #done
   - returns a **string** that is the venture capitalist's name
-- `VentureCapitalist#tres_commas`
+- `VentureCapitalist#tres_commas` #done
   - returns a **boolean** stating whether or not the venture capitalist is in the Trés Commas club
-- `VentureCapitalist.all`
+- `VentureCapitalist.all` #done
   - returns an array of all venture capitalists
 - `VentureCapitalist.tres_commas_club`
   - returns an array of all venture capitalists in the Trés Commas club
@@ -63,9 +63,9 @@ We've provided you with a console that you can use to test your code. To enter a
 
 #### Build out the following methods on the `FundingRound` class
 
-- `FundingRound.all`
+- `FundingRound.all` #done
   - returns all of the funding rounds
-- `FundingRound#startup`
+- `FundingRound#startup` 
   - returns the startup object for that given funding round
   - Once a funding round is created, I should not be able to change the startup
 - `FundingRound#venture_capitalist`
