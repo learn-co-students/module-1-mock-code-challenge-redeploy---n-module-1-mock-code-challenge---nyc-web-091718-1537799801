@@ -1,9 +1,10 @@
 class VentureCapitalist
-  attr_accessor :name
+  attr_accessor :name, :tres_commas
   @@all = []
 
-  def initialize(name)
+  def initialize(name, tres_commas)
     @name = name
+    @tres_commas = tres_commas
 
     @@all << self
   end
@@ -22,11 +23,14 @@ class VentureCapitalist
     end
   end
 
-  def portfolio
-    self.funding_rounds.select do |fr|
-        fr.startup
-      #Go through FundingRound to retrieve all of my startups
+  def startups
+    startups = self.funding_rounds.map do |round|
+      round.startup
     end
+  end
+
+  def portfolio
+    self.startups.uniq
   end
 
   def investment_total
@@ -38,18 +42,26 @@ class VentureCapitalist
   end
 
   def biggest_investment
-    self.funding_rounds.select do |fr|
-      ### Iterate through this VC and find .max in his investment value array
+    all = self.funding_rounds.select do |fr|
+        fr.investment
     end
+    final = all.sort_by do |all|
+      all.investment
+    end
+    final.last
   end
 
+  def invested(domain)
+    total = 0
 
-  def tres_commas
-    if (self.investment_total) >= 1000000000
-      true
-    else
-      false
+    all_in_domain = self.startups.select do |startup|
+      startup.domain == domain
     end
+    all_in_domain.each do |startup|
+      total += startup.total_funds
+
+    end
+    total
   end
 
 
@@ -58,32 +70,10 @@ class VentureCapitalist
     @@all
   end
 
+  def self.tres_commas_club
+    @@all.select do |vc|
+      vc.tres_commas == true
+    end
+  end
+
 end ### End of VentureCapitalist Class
-
-# - DONE - `VentureCapitalist#name`
-#   - returns a **string** that is the venture capitalist's name
-#
-# - DONE`VentureCapitalist#tres_commas`
-#   - returns a **boolean** stating whether or not the venture capitalist is in the Trés Commas club
-#
-# - DONE `VentureCapitalist.all`
-#   - returns an array of all venture capitalists
-#
-# - `VentureCapitalist.tres_commas_club`
-#   - returns an array of all venture capitalists in the Trés Commas club
-
-#
-# -DONE `VentureCapitalist#offer_contract(startup, type, investment)`
-#   - given a **startup object**, type of investment (as a string), and the amount invested (as a float), creates a new funding round and associates it with that startup and venture capitalist.
-
-# - DONE `VentureCapitalist#portfolio`
-#   - Returns a **unique** list of all startups this venture capitalist has funded
-
-# - DONE  -`VentureCapitalist#funding_rounds`
-#   - returns an array of all funding rounds for that venture capitalist
-
-# - `VentureCapitalist#biggest_investment`
-#   - returns the largest funding round given by this venture capitalist
-
-# - `VentureCapitalist#invested(domain)`
-#   - given a **domain string**, returns the total amount invested in that domain

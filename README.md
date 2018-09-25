@@ -29,7 +29,7 @@ We've provided you with a console that you can use to test your code. To enter a
 
 #### Build the following methods on the `Startup` class
 
-- `Startup#name`
+<!-- - `Startup#name`
   - returns a **string** that is the startup's name
 - `Startup#founder`
   - returns a **string** that is the founder's name
@@ -38,18 +38,18 @@ We've provided you with a console that you can use to test your code. To enter a
   - returns a **string** that is the startup's domain
   - Once a startup is created, the domain cannot be changed.
 - `Startup.all`
-  - should return **all** of the startup instances
-- `Startup.find_by_founder`
-  - given a string of a **founder's name**, returns the **first startup** whose founder's name matches
-- `Startup.domains`
-  - should return an **array** of all of the different startup domains
+  - should return **all** of the startup instances -->
+<!-- - `Startup.find_by_founder`
+  - given a string of a **founder's name**, returns the **first startup** whose founder's name matches -->
+<!-- - `Startup.domains`
+  - should return an **array** of all of the different startup domains -->
 - `Startup.pivot(domain)`
   - given a string of a domain, change the domain of the startup
 
 ---
 
 #### Build out the following methods on the `VentureCapitalist` class
-
+<!--
 - `VentureCapitalist#name`
   - returns a **string** that is the venture capitalist's name
 - `VentureCapitalist#tres_commas`
@@ -57,12 +57,12 @@ We've provided you with a console that you can use to test your code. To enter a
 - `VentureCapitalist.all`
   - returns an array of all venture capitalists
 - `VentureCapitalist.tres_commas_club`
-  - returns an array of all venture capitalists in the Trés Commas club
+  - returns an array of all venture capitalists in the Trés Commas club -->
 
 ---
 
 #### Build out the following methods on the `FundingRound` class
-
+<!--
 - `FundingRound.all`
   - returns all of the funding rounds
 - `FundingRound#startup`
@@ -75,35 +75,35 @@ We've provided you with a console that you can use to test your code. To enter a
   - returns the type of funding round
   - Examples include: Angel, Pre-Seed, Seed, Series A, Series B, Series C, etc.
 - `FundingRound#investment`
-  - returns the amount invested during this funding round. This should be a float that is not be a negative number.
+  - returns the amount invested during this funding round. This should be a float that is not be a negative number. -->
 
 ---
 
 ### Associations and Aggregate Methods
 
 #### Startup
-
+<!--
 - `Startup#sign_contract(venture_capitalist, type, investment)`
-  - given a **venture capitalist object**, type of investment (as a string), and the amount invested (as a float), creates a new funding round and associates it with that startup and venture capitalist.
-- `Startup#num_funding_rounds`
-  - Returns the total number of funding rounds that the startup has gotten
-- `Startup#total_funds`
-  - Returns the total sum of investments that the startup has gotten
-- `Startup#investors`
-  - Returns a **unique** array of all the venture capitalists that have invested in this company
-- `Startup#big_investors`
-  - Returns a **unique** array of all the venture capitalists that have invested in this company and are in the Trés Commas club
+  - given a **venture capitalist object**, type of investment (as a string), and the amount invested (as a float), creates a new funding round and associates it with that startup and venture capitalist. -->
+<!-- - `Startup#num_funding_rounds`
+  - Returns the total number of funding rounds that the startup has gotten -->
+<!-- - `Startup#total_funds`
+  - Returns the total sum of investments that the startup has gotten -->
+<!-- - `Startup#investors`
+  - Returns a **unique** array of all the venture capitalists that have invested in this company -->
+<!-- - `Startup#big_investors`
+  - Returns a **unique** array of all the venture capitalists that have invested in this company and are in the Trés Commas club -->
 
-#### VentureCapitalist
+<!-- #### VentureCapitalist
 
 - `VentureCapitalist#offer_contract(startup, type, investment)`
-  - given a **startup object**, type of investment (as a string), and the amount invested (as a float), creates a new funding round and associates it with that startup and venture capitalist.
-- `VentureCapitalist#portfolio`
+  - given a **startup object**, type of investment (as a string), and the amount invested (as a float), creates a new funding round and associates it with that startup and venture capitalist. -->
+<!-- - `VentureCapitalist#portfolio`
   - Returns a **unique** list of all startups this venture capitalist has funded
 - `VentureCapitalist#funding_rounds`
-  - returns an array of all funding rounds for that venture capitalist
-- `VentureCapitalist#biggest_investment`
-  - returns the largest funding round given by this venture capitalist
+  - returns an array of all funding rounds for that venture capitalist -->
+<!-- - `VentureCapitalist#biggest_investment`
+  - returns the largest funding round given by this venture capitalist -->
 - `VentureCapitalist#invested(domain)`
   - given a **domain string**, returns the total amount invested in that domain
 

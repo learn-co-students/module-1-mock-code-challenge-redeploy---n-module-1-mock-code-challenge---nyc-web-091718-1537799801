@@ -7,9 +7,9 @@ end
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
 
-vc1 = VentureCapitalist.new("Steve")
-vc2 = VentureCapitalist.new("Bill")
-vc3 = VentureCapitalist.new("John")
+vc1 = VentureCapitalist.new("Steve", true)
+vc2 = VentureCapitalist.new("Bill", false)
+vc3 = VentureCapitalist.new("John", false)
 
 s1 = Startup.new("WebMD", "Thomas Edison", "health")
 s2 = Startup.new("Flatiron Health", "Bill Clinton", "health")
